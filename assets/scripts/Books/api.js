@@ -1,6 +1,5 @@
 
 const config = require('../config.js')
-const store = require('../store')
 
 const getBooks = () => {
   return $.ajax({
@@ -41,6 +40,13 @@ const updateBook = (id, title, author) => {
 const removeBook = (id) => {
   return $.ajax({
     url: config.apiUrl + `/books/${id}`,
-    method: 'DELETE',
+    method: 'DELETE'
   })
+}
+module.exports = {
+  getBooks,
+  getBook,
+  createBook,
+  updateBook,
+  removeBook
 }
