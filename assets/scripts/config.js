@@ -1,4 +1,4 @@
-'use strict'
+
 
 let apiUrl
 const apiUrls = {
