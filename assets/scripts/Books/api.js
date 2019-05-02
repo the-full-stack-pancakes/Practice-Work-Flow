@@ -1,8 +1,8 @@
 
-const config = require('./config.js')
-const store = require('./store')
+const config = require('../config.js')
+const store = require('../store')
 
-const getBooks = () = {
+const getBooks = () => {
   return $.ajax({
     url: config.apiUrl + `/books`,
     method: 'GET'
@@ -14,7 +14,7 @@ const getBook = (id) => {
     method: 'GET'
   })
 }
-const createBook = (title, author) = {
+const createBook = (title, author) => {
   return $.ajax({
     url: config.apiUrl + `/books`,
     method: 'POST',
@@ -26,7 +26,7 @@ const createBook = (title, author) = {
     }
   })
 }
-const updateBook = (id, title, author) = {
+const updateBook = (id, title, author) => {
   return $.ajax({
     url: config.apiUrl + `/books/${id}`,
     method: 'PATCH',
@@ -38,7 +38,7 @@ const updateBook = (id, title, author) = {
     }
   })
 }
-const removeBook = (id) = {
+const removeBook = (id) => {
   return $.ajax({
     url: config.apiUrl + `/books/${id}`,
     method: 'DELETE',
